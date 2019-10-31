@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int hanoi(int, char, char, char);
+
+int main()
+{
+    int n;
+
+    char A = 'A', B = 'B', C = 'C';
+    printf("Enter no. of disks: \n");
+    scanf("%d", &n);
+    hanoi(n, A, C, B);
+
+
+}
+
+int hanoi(int disks, char from, char to, char khaali)
+{
+    if (disks == 1)
+       {
+        printf("Move the 1st disk from %c to %c\n", from, to);
+        return 0;
+        }
+    hanoi(disks - 1, from, khaali, to);
+    printf("move %dth disk from %c to %c\n", disks, from, to);
+    hanoi(disks - 1, khaali, to, from);
+
+}
