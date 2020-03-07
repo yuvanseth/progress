@@ -14,15 +14,15 @@ int main()
 
 }
 
-int hanoi(int disks, char from, char to, char khaali)
+int hanoi(int disks, char from, char to, char empty)
 {
     if (disks == 1)
        {
         printf("Move the 1st disk from %c to %c\n", from, to);
         return 0;
         }
-    hanoi(disks - 1, from, khaali, to);
+    hanoi(disks - 1, from, empty, to);
     printf("move %dth disk from %c to %c\n", disks, from, to);
-    hanoi(disks - 1, khaali, to, from);
+    hanoi(disks - 1, empty, to, from);
 
 }
