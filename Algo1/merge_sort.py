@@ -31,6 +31,6 @@ def mergeSort(arr):
 
 if __name__ == '__main__':
 
-    arr = [1,6,2,5,3,4]
+    arr[] = int(input("Enter numbers: "))
     mergeSort(arr)
     print(arr)
